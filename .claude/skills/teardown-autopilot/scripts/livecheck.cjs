@@ -116,7 +116,8 @@ const avg = (a) => a.reduce((x, y) => x + y, 0) / a.length;
     await settle();
     say('a key during the tour: tour', (await L()).tour);
     // countdown in the chip near the end of the quiet
-    await p.waitForFunction(() => /BACK BY ITSELF/.test(document.querySelector('.tourchip').textContent), null, {timeout: 60000});
+    // the countdown: an English chip says BACK BY ITSELF; any language may mark it with data-countdown
+    await p.waitForFunction(() => /BACK BY ITSELF/.test(document.querySelector('.tourchip').textContent) || !!document.querySelector('.tourchip').dataset.countdown, null, {timeout: 60000});
     say('chip in the last 10 s', await chipText());
     console.log('  page errors:', p.errs.length ? p.errs.join(' | ') : 'none');
     await p.close();

@@ -34,6 +34,10 @@ frame in `<sheet>-frames/` — the sheet alone is too small to see a label overl
 - Does every number agree with the pose (the schematic, the charts, the state panel, the callouts, each other)?
   Do the arithmetic for one or two: 34.6 mm down of 89 → 61% from BDC.
 
+Pass the build's **name** (`umbrella-film`, found in `$TEARDOWN_OUT/dist`), not the `.html` path: a path ending in
+`.html` switches the capture tool to the `window.seek(t)` page contract, and a sim page (which has `window.SIM`, not
+`seek`) then waits for ever without a word of output.
+
 ## 4. Every transition at 0.2 s
 
 For each camera move, focus change, cut, ramp: `--stills every:0.2 --from A --to B --cols 5`. Then
