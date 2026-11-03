@@ -5,6 +5,14 @@
 这是一个 Claude Code 技能（skill）。它把 [teardown](https://github.com/elvarofficial/teardown) 技能的整套流程串起来自动跑完：
 找真实数据 → 手算验证 → 建模 → 3D 零件 → 控制台 → 导览动画 → 全面检查 → 可交互网页 →（可选）1080p60 视频 → 报告。
 
+## 范例：V8 发动机
+
+[`docs/v8-live.html`](docs/v8-live.html) 是用这套流程做出来的 V8 四冲程发动机模拟器，一个文件，离线可用：
+下载后用浏览器打开就能玩（自动导览；点击、拖动、滚轮或按键接管；H 隐藏面板，P 显示帧率）。
+
+想直接在网上打开：在仓库的 **Settings → Pages** 里，把 Source 设成 **Deploy from a branch**，分支选 `main`、
+文件夹选 `/docs`，保存。一两分钟后访问 `https://bk19921030315-ai.github.io/teardown-autopilot/v8-live.html`。
+
 ## 怎么用
 
 在 Claude Code 里输入：
